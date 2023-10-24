@@ -11,7 +11,7 @@ router= APIRouter(
 )
 
 users = [
-    User(id=uuid.uuid4(), username="Dija", email="dija@gmail.com", password="Dija"),
+    User(id=uuid.uuid4(), username="Khadija", email="dija@gmail.com", password="Khadija"),
     User(id=uuid.uuid4(), username="Oumar", email="oumar@gmail.com", password="Oumar"),
     User(id=uuid.uuid4(), username="Daouda", email="daouda@gmail.com", password="Oumar")
 ]
