@@ -73,8 +73,8 @@ async def webhook_received(request: Request, stripe_signature: str = Header(None
 @router.get('/usage')
 async def stripe_usage(userData: int = Depends(get_current_user)):
     fireBase_user= auth.get_user(userData['uid'])
-    stripe_data= db.child("users").child(fireBase_user.uid).child("stripe").get().val()
-    cust_id = stripe_data["id"]
+    stripe_data= db.child("user").child(fireBase_user.uid).child("stripe").get().val()
+    cust_id = stripe_data["cust_id"]
     return stripe.Invoice.upcoming(customer=cust_id)
 
 def increment_stripe(userId:str):
