@@ -52,7 +52,7 @@ async def webhook_received(request: Request, stripe_signature: str = Header(None
         event_data = event['data']
     except Exception as e:
         return {"error": str(e)}
-    
+    print(event_data)
     event_type = event['type']
     if event_type == 'checkout.session.completed':
         print('Checkout session completed')
