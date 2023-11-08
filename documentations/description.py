@@ -6,8 +6,8 @@ Pour obtenir votre accés :
 
 
 # Spécification
-Cette API puissante vous permet de gérer de manière exhaustive vos listes de lecture musicales et les utilisateurs de votre plateforme. 
-Elle propose des endpoints pour créer, modifier, supprimer ou répertorier des morceaux de musique dans votre liste de lecture, ainsi que pour gérer les utilisateurs de votre plateforme. 
+Cette API puissante vous permet de gérer de manière exhaustive vos listes de lecture musicales et les utilisateurs de votre plateforme. "\n"
+Elle propose des endpoints pour créer, modifier, supprimer ou répertorier des morceaux de musique dans votre liste de lecture, ainsi que pour gérer les utilisateurs de votre plateforme. "\n" 
 De plus, elle intègre des fonctionnalités d'authentification sécurisée et des options de paiement via Stripe.
 
 """
