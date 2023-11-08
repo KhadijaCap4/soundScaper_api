@@ -41,7 +41,7 @@ async def stripe_checkout():
     
 @router.post('/webhook')
 async def webhook_received(request: Request, stripe_signature: str = Header(None)):
-    webhook_secret = "whsec_ca18b0188b5ea93eccdb6b816905d8450c13f97afb5d432c6fb07fede16b0a62"
+    webhook_secret = "whsec_JHjs6RPEiaY6rZg8seg52WMebgDfesuv"
     data = await request.body()
     try: 
         event = stripe.Webhook.construct_event(
