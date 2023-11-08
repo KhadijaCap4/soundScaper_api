@@ -7,5 +7,13 @@ tags_metadata = [
     {
         "name": "Users",
         "description": "Create, Modify, Delete, or List Users of your platform",
+    },
+    {
+        "name": "Auth",
+        "description": "Sign up, Sign in and secure data",
+    },
+    {
+        "name": "Stripe",
+        "description": "Payment sessions, webhook stripe, consulting the use of the Stripe subscription ",
     }
 ]

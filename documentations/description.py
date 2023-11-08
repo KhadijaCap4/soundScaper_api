@@ -7,6 +7,6 @@ Pour obtenir votre accés :
 
 
 # Spécification
-Un utilisateur pourra accéder a toutes les musiques et playlists qu'il souhaite
+Un utilisateur pourra accéder a toutes les musiques de sa playlist
 
 """
