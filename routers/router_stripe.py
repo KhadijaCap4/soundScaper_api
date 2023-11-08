@@ -62,7 +62,7 @@ async def webhook_received(request: Request, stripe_signature: str = Header(None
         firebase_user = auth.get_user_by_email(cust_email)
         cust_id = event_data['object']['customer']
         item_id = event_data['object']['lines']['data'][0]['subscription_item']
-        db.child("users").child(firebase_user.uid).child("stripe").set({"item_id": item_id, "cust_id": cust_id })
+        db.child("user").child(firebase_user.uid).child("stripe").set({"item_id": item_id, "cust_id": cust_id })
     elif event_type == 'invoice.payment_failed':
         print('Invoice payment failed')
     else:
@@ -74,7 +74,7 @@ async def webhook_received(request: Request, stripe_signature: str = Header(None
 async def stripe_usage(userData: int = Depends(get_current_user)):
     fireBase_user= auth.get_user(userData['uid'])
     stripe_data= db.child("user").child(fireBase_user.uid).child("stripe").get().val()
-    cust_id = stripe_data["cust_id"]
+    cust_id = stripe_data["id"]
     return stripe.Invoice.upcoming(customer=cust_id)
 
 def increment_stripe(userId:str):
