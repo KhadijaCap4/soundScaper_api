@@ -24,7 +24,7 @@ async def stripe_checkout():
             line_items=[
                 {
                     # Price ID du produit à vendre
-                    'price': 'price_1O51yPArOje5RHk1Oseu9epi',
+                    'price': 'price_1OA8lcArOje5RHk1qXViDkhE',
                     'quantity': 1
                 },
             ],
