@@ -9,9 +9,12 @@ router= APIRouter(
 )
 
 musics = [
-    Music(id=uuid.uuid4(), title="GLAIVE"),
-    Music(id=uuid.uuid4(), title="DKR"),
-    Music(id=uuid.uuid4(), title="92i Veyron")
+    Music(id=uuid.uuid4(), title="GLAIVE", artist="Booba", label="Tallac Records", genre="Hip Hop"),
+    Music(id=uuid.uuid4(), title="Shallow", artist="Lady Gaga & Bradley Cooper", label="Interscope", genre="Pop rock"),
+    Music(id=uuid.uuid4(), title="DKR", artist="Booba", label="Tallac Records", genre="Hip Hop"),
+    Music(id=uuid.uuid4(), title="Someone like you", artist="Columbia", label="Tallac Records", genre="Pop"),
+    Music(id=uuid.uuid4(), title="92i Veyron", artist="Booba", label="Tallac Records", genre="Hip Hop"),
+    Music(id=uuid.uuid4(), title="Aya Nakamura", artist="La dot", label="Parlophone", genre="Pop/R&B")
 ]
 
 @router.get('', response_model=List[Music])
@@ -21,7 +24,7 @@ async def get_music():
 @router.post('', response_model=Music, status_code=201)
 async def create_music(givenTitle: MusicNoID):
     generatedId = uuid.uuid4()
-    newMusic = Music(id=generatedId, title=givenTitle.title)  # Use givenTitle.title to access the title
+    newMusic = Music(id=generatedId, title=givenTitle.title, artist=givenTitle.artist, label=givenTitle.label, genre=givenTitle.genre)  # Use givenTitle.title to access the title
     musics.append(newMusic)
     return newMusic
 

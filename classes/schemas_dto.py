@@ -4,9 +4,15 @@ import uuid
 class Music(BaseModel):
     id: uuid.UUID  # Change data type to uuid.UUID
     title: str
+    artist: str
+    label: str
+    genre: str
 
 class MusicNoID(BaseModel):
     title: str
+    artist: str
+    label: str
+    genre: str
 
 class User(BaseModel):
     id: uuid.UUID
