@@ -8,7 +8,6 @@ from dotenv import dotenv_values
 config = dotenv_values(".env")
 
 if not firebase_admin._apps:
-    #cred = credentials.Certificate("configs/soundscaper-98b5b-firebase-adminsdk-bwf3k-13f6b4e070.json")
     cred = credentials.Certificate(json.loads(config['FIREBASE_SERVICE_ACCOUNT_KEY']))
     firebase_admin.initialize_app(cred)
     
