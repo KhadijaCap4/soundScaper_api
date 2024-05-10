@@ -1,30 +1,17 @@
 from pydantic import BaseModel
 import uuid
 
-class Music(BaseModel):
-    id: uuid.UUID  # Change data type to uuid.UUID
-    title: str
-    artist: str
-    label: str
-    genre: str
-
-class MusicNoID(BaseModel):
-    title: str
-    artist: str
-    label: str
-    genre: str
-
-class User(BaseModel):
+class Todo(BaseModel):
     id: uuid.UUID
-    username: str
-    email: str
-    password: str
+    Title: str
+    Description: str
+    Completed: bool
 
-class UserNoID(BaseModel):
-    username: str
-    email: str
-    password: str
-
-class UserAuth(BaseModel):
-    email: str
-    password: str
+class TodoCreate(BaseModel):
+    Title: str
+    Description: str
+    
+class TodoUpdate(BaseModel):
+    Title: str
+    Description: str
+    Completed: bool
